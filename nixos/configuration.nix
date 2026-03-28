@@ -91,6 +91,7 @@
     isNormalUser = true;
     description = "Dimluar";
     extraGroups = ["networkmanager" "wheel"];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       kdePackages.kate
       #  thunderbird
@@ -149,6 +150,9 @@
     home-manager
     kitty
   ];
+
+  # Enable zsh
+  programs.zsh.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

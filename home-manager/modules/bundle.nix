@@ -1,6 +1,6 @@
 {
   imports = [
-    ./bash.nix
+    ./zsh.nix
     ./neovim.nix
     ./kitty.nix
     ./git.nix
