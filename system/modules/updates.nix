@@ -1,11 +1,21 @@
 {
-  # Automatic updating
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.dates = "weekly";
+  # System upgrade
+  system.autoUpgrade = {
+    enable = true;
+    flake = "~/.config/nix";
+    flags = [
+      "--commit-lock-file"
+    ];
+    dates = "weekly";
+    randomizedDelaySec = "15min";
+    allowReboot = false;
+  };
 
-  # Automatic cleanup
-  nix.gc.automatic = true;
-  nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than 10d";
+  # Garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 10d";
+  };
   nix.settings.auto-optimise-store = true;
 }
