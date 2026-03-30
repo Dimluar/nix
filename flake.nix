@@ -19,12 +19,12 @@
   in {
     nixosConfigurations.oblivion = nixpkgs.lib.nixosSystem {
       inherit system;
-      modules = [./nixos/configuration.nix];
+      modules = [./system/configuration.nix];
     };
 
     homeConfigurations.dimu = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
-      modules = [./home-manager/home.nix];
+      modules = [./user/home.nix];
     };
   };
 }
