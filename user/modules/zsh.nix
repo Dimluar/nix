@@ -9,7 +9,7 @@
       flakePath = " ~/.config/nix";
     in {
       rb = "sudo nixos-rebuild switch --flake ${flakePath}";
-      upd = "nix flake update ${flakePath}";
+      upd = "sudo nix flake update --flake ${flakePath}";
       upg = "sudo nixos-rebuild switch --upgrade --flake ${flakePath}";
 
       hms = "home-manager switch --flake ${flakePath}";
