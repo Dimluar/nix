@@ -1,6 +1,7 @@
 {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  boot.loader.timeout = null;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable display manager
