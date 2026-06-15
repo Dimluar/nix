@@ -8,5 +8,6 @@
     librewolf
     alejandra
     nerd-fonts.caskaydia-cove
+    libreoffice
   ];
 }
